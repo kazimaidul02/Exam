@@ -1,44 +1,53 @@
 import 'package:flutter/material.dart';
 
-void  main (){
-  runApp(myApp());
+void main() {
+  runApp(MyApp());
 }
 
-class myApp extends StatelessWidget {
-  const myApp({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Colors.redAccent,
-        appBarTheme: AppBarTheme(
-          color: Colors.redAccent,
-          centerTitle: true,
-        )
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Add Employee'),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              TextField(
+                decoration: InputDecoration(
+                  labelText: 'Name',
+                ),
+              ),
+              SizedBox(height: 10.0),
+
+              TextField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  labelText: 'Age',
+                ),
+
+              ),
+              SizedBox(height: 10.0),
+
+              TextField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  labelText: 'Salary',
+                ),
+              ),
+              SizedBox(height: 15.0),
+
+              ElevatedButton(
+                onPressed: () {},
+                child: Text('Add Employee',style: TextStyle(fontSize: 20,color:Colors.purpleAccent ),),
+              ),
+            ],
+          ),
+        ),
       ),
-      title: "Kazi",
-      home: Home(),
     );
   }
 }
-
-class Home extends StatefulWidget {
-  const Home({super.key});
-
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Column(),
-
-    );
-  }
-}
-
-
