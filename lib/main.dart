@@ -16,14 +16,14 @@ class MyApp extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              TextField(
+              TextFormField(
                 decoration: InputDecoration(
                   labelText: 'Name',
                 ),
               ),
               SizedBox(height: 10.0),
 
-              TextField(
+              TextFormField(
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   labelText: 'Age',
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
               ),
               SizedBox(height: 10.0),
 
-              TextField(
+              TextFormField(
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   labelText: 'Salary',
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
 
               ElevatedButton(
                 onPressed: () {},
-                child: Text('Add Employee',style: TextStyle(fontSize: 20,color:Colors.purpleAccent ),),
+                child: Text('Add Employee',style: TextStyle(fontSize: 20,color:Colors.purple ),),
               ),
             ],
           ),
